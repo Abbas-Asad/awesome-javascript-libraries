@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* styles.css */
+
+/* Main container */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping for responsive design */
+  gap: 20px;
+  justify-content: center; /* Center items */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Product card */
+.prodCd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for product card */
+.prodCd:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.prodCd img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Product title */
+.prodCd h2 {
+  /* font-size: 1.2rem;
+  font-weight: bold; */
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+/* Product price */
+.prodCd p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+button{
+  background-color: rgb(68, 68, 226);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+button.cart{
+  background-color: rgb(68, 68, 226);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+ul{
+  display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  .prodCd {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px;
+  }
+}
